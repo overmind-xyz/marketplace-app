@@ -1,0 +1,51 @@
+// Item Listing
+const listingForm = document.getElementById('listingForm');
+const itemListings = document.getElementById('itemListings');
+
+listingForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
+  const price = document.getElementById('price').value;
+  const quantity = document.getElementById('quantity').value;
+
+  const newItem = {
+    title,
+    description,
+    price,
+    quantity
+  };
+
+  // Add the new item to the marketplace
+  // You can store the listed items in an array or a database
+
+  // Clear the form fields
+  listingForm.reset();
+});
+
+// Purchase an Item - Implement your logic for item purchase
+
+// Add Items to Cart - Implement your logic for adding items to the cart
+
+// Add Item to Watchlist - Implement your logic for adding items to the watchlist
+
+// Allow the creator of the offer to cancel the offer if it has not been joined
+// Implement code to handle canceling the offer if not joined
+
+// Create Review for Seller/Item
+const reviewsContainer = document.getElementById('reviews');
+
+function createReview(sellerId, itemId, rating, comment) {
+  // Create a review object with sellerId, itemId, rating, and comment
+
+  // Store the review object in an array or a database
+
+  // Display the review on the seller's profile or item's page
+  const reviewElement = document.createElement('div');
+  reviewElement.innerHTML = `
+    <p>Rating: ${rating}</p>
+    <p>Comment: ${comment}</p>
+  `;
+  reviewsContainer.appendChild(reviewElement);
+}
